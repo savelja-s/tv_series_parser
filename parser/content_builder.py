@@ -73,9 +73,10 @@ class ContentBuilder:
                 })
         return tasks, task_info
 
-    def build(self, player_data, serial_dir: Path):
+    def build(self, player_data, serial_dir: Path, from_season: int = 1):
+        filtered_player_data = player_data[from_season - 1:]
         """Запускає підготовку variants.json паралельно і формує content.json"""
-        tasks, task_info = self.build_content_tasks(player_data, serial_dir)
+        tasks, task_info = self.build_content_tasks(filtered_player_data, serial_dir)
         manifest = []
 
         with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
