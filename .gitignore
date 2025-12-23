@@ -1,0 +1,39 @@
+# ─── Python ─────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+.venv/
+venv/
+ENV/
+
+# ─── Logs ───────────────────────────────────────────────
+*.log
+
+# ─── macOS ──────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ─── IDE ────────────────────────────────────────────────
+.idea/
+.vscode/
+
+# ─── Project specific ───────────────────────────────────
+serials/
+content.json
+player.json
+
+# temp segment dirs
+*_tmp/
+
+# downloaded video files
+*.ts
+
+# cache / debug
+*.dump
+*.cache
+
